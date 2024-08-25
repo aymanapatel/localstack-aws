@@ -1,0 +1,20 @@
+# image:
+#   file: .gitpod.Dockerfile
+
+tasks:
+  - name: Initialise
+    init: |
+      bash ${GITPOD_REPO_ROOT}/bin/init.sh > /tmp/init.log 2>&1
+      gp sync-done init
+
+  - name: Run
+    init: gp sync-await init
+    command: bash ${GITPOD_REPO_ROOT}/bin/start.sh
+
+ports:
+  - name: Web App
+    description: The main application web server
+    port: 3000
+    onOpen: open-browser
+  - port: 4526-4559
+    onOpen: ignore
