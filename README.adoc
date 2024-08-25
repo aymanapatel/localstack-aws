@@ -1,0 +1,27 @@
+= Learning
+Ayman Patel
+:toc:
+
+
+
+
+== awslocal
+
+== Listing all
+
+```
+awslocal s3 ls                 # List bucket. Usually `ls` is to list the arguments. but S3 is weird.
+awslocal kinesis list-streams
+awslocal lambda list-fucntions
+```
+
+
+=== Make bucket
+
+```
+
+               |--> bucket name
+awslocal s3 mb s3://ayman-bucket
+            |---> Make bucket
+```            
+
