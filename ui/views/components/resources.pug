@@ -1,0 +1,10 @@
+div(hx-swap-oob="afterbegin:#timeline")
+  .card.mb-2.shadow-sm(id='tweet-' + t.id)
+    .card-body
+      .d-flex
+        img.me-4(src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpv-07PDovGyVWwK2h4cBKz9RxflQGoI1AyA&s', width="108")
+        div
+          h5.card-title.text-muted
+            | #{t.time}
+          .card-text.lead.mb-2
+            | Bucket Name: #{s3}  
