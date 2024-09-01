@@ -1,7 +1,8 @@
 = Learning
 Ayman Patel
 :toc:
-
+:toclevels: 4
+:icons: font
 
 
 
@@ -23,5 +24,37 @@ awslocal lambda list-fucntions
                |--> bucket name
 awslocal s3 mb s3://ayman-bucket
             |---> Make bucket
-```            
+```      
 
+
+=== Inserting file into bucket
+
+```
+awslocal s3 cp ../../files/output.txt s3://ayman-bucket
+```
+
+
+== S3
+
+
+=== Hidden/Unkown features
+
+
+==== Byte-Range Fetches
+
+
+
+https://docs.aws.amazon.com/whitepapers/latest/s3-optimizing-performance-best-practices/use-byte-range-fetches.html[AWS Doc]
+
+
+WARNING: Presigned URL not working https://github.com/aws/aws-sdk-js-v3/issues/4823[Github Issue]. Tried this and still issue. Need to see JS SDK issue or S3
+
+==== Retry
+
+
+During cold-start, first S3 API request migh be slow; retry mechanism is provided to allow retry the S3 reading. 
+
+https://docs.aws.amazon.com/whitepapers/latest/s3-optimizing-performance-best-practices/retry-requests-for-latency-sensitive-applications.html[AWS Doc]
+
+
+==== S3 Select
