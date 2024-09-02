@@ -58,3 +58,5 @@ https://docs.aws.amazon.com/whitepapers/latest/s3-optimizing-performance-best-pr
 
 
 ==== S3 Select
+
+WARNING: S3 Select is deprecated. https://github.com/aws/aws-sdk-pandas/issues/2927[Github Link]
